@@ -3,57 +3,285 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wedding Invitation</title>
+  <title>Wedding Invitation - Ansar & Manam</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #fafafa;
-      color: #222;
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
+      background: linear-gradient(135deg, #6b0f1a 0%, #8B1538 50%, #6b0f1a 100%);
+      color: #f5deb3;
       text-align: center;
       padding: 2rem;
-      line-height: 1.6;
+      line-height: 1.8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+    
     .card {
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      background: linear-gradient(to bottom, #7a0e20, #8B1538, #7a0e20);
+      padding: 3rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      border: 3px solid #d4af37;
+      position: relative;
+      overflow: hidden;
     }
-    h1 {
+    
+    .card::before,
+    .card::after {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .card::before {
+      top: -100px;
+      left: -100px;
+    }
+    
+    .card::after {
+      bottom: -100px;
+      right: -100px;
+    }
+    
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .bismillah {
+      font-size: 1.5rem;
+      color: #ffd700;
+      margin-bottom: 1rem;
+      font-family: 'Traditional Arabic', serif;
+      letter-spacing: 2px;
+    }
+    
+    .urdu-text {
+      font-size: 0.95rem;
+      color: #f5deb3;
+      margin-bottom: 2rem;
+      font-style: italic;
+      line-height: 1.8;
+    }
+    
+    .parents {
+      font-size: 1rem;
+      color: #f5deb3;
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+    
+    .wedding-title {
+      font-size: 3.5rem;
+      color: #ffd700;
+      margin: 1.5rem 0;
+      font-family: 'Great Vibes', 'Brush Script MT', cursive;
+      font-weight: 400;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .honouring {
+      font-size: 1.2rem;
+      color: #f5deb3;
+      margin-bottom: 1rem;
+    }
+    
+    .names {
+      font-size: 2.5rem;
+      color: #ffffff;
       font-weight: 600;
+      letter-spacing: 8px;
+      margin: 1.5rem 0;
+      text-transform: uppercase;
     }
-    .muted {
-      color: #666;
+    
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+      gap: 1rem;
     }
+    
+    .divider::before,
+    .divider::after {
+      content: '';
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #d4af37, transparent);
+    }
+    
+    .divider span {
+      color: #ffd700;
+      font-size: 1.5rem;
+    }
+    
+    .date-section {
+      margin: 2rem 0;
+    }
+    
+    .month {
+      font-size: 1.3rem;
+      color: #ffd700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+    }
+    
+    .date-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1rem 0;
+    }
+    
+    .day-time {
+      font-size: 1rem;
+      color: #f5deb3;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      border-top: 1px solid #d4af37;
+      border-bottom: 1px solid #d4af37;
+    }
+    
+    .date-number {
+      font-size: 5rem;
+      color: #ffd700;
+      font-weight: 600;
+      line-height: 1;
+    }
+    
+    .year {
+      font-size: 2rem;
+      color: #ffd700;
+      letter-spacing: 8px;
+    }
+    
+    .venue-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(212,175,55,0.3);
+    }
+    
+    .venue-at {
+      font-size: 1.2rem;
+      color: #f5deb3;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    
+    .venue-name {
+      font-size: 1.5rem;
+      color: #ffd700;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    
+    .venue-address {
+      font-size: 1rem;
+      color: #f5deb3;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    .map-link {
+      display: inline-block;
+      color: #ffd700;
+      text-decoration: none;
+      padding: 0.8rem 2rem;
+      border: 2px solid #d4af37;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      margin-top: 1rem;
+    }
+    
+    .map-link:hover {
+      background: #d4af37;
+      color: #7a0e20;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(212,175,55,0.4);
+    }
+    
+    .dua {
+      margin-top: 2.5rem;
+      font-size: 1.1rem;
+      color: #f5deb3;
+      font-style: italic;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap');
   </style>
 </head>
 <body>
   <div class="card">
-    <p class="muted">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
-    <h1>Ahmad & Fatima</h1>
-    <p class="muted">With the blessings of Allah</p>
-
-    <p>
-      We invite you to join us in celebrating our marriage
-    </p>
-
-    <p>
-      <strong>Date:</strong> 12 July 2026<br />
-      <strong>Time:</strong> 5:00 PM<br />
-      <strong>Venue:</strong> Masjid XYZ, City
-    </p>
-
-    <p>
-      <a href="https://maps.google.com" target="_blank">
-        View location on Google Maps
-      </a>
-    </p>
-
-    <p class="muted">
-      Please keep us in your du‘as 🤍
-    </p>
+    <div class="content">
+      <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+      
+      <p class="urdu-text">
+        دے زندہ اور یہ ایت اور عمر اور عزت<br>
+        ہم دونوں کو مبارک سبحان من یحرانی
+      </p>
+      
+      <p class="parents">Mr & Mrs Mubarik</p>
+      <p class="parents">cordially invite you to their daughter's</p>
+      
+      <h1 class="wedding-title">Wedding Ceremony</h1>
+      
+      <p class="honouring">Honouring our Bride & Groom</p>
+      
+      <h2 class="names">ANSAR & MANAM</h2>
+      
+      <div class="divider">
+        <span>✦</span>
+      </div>
+      
+      <div class="date-section">
+        <p class="month">JULY</p>
+        <div class="date-container">
+          <div class="day-time">MONDAY</div>
+          <div class="date-number">21</div>
+          <div class="day-time">AT 3PM</div>
+        </div>
+        <p class="year">2026</p>
+      </div>
+      
+      <div class="venue-section">
+        <p class="venue-at">at</p>
+        <p class="venue-name">Crystal Palace by Bajwa</p>
+        <p class="venue-address">
+          Odenwaldstrasse 9, 64521 Gross Gerau<br>
+          Deutschland
+        </p>
+        
+        <a href="https://www.google.com/maps/search/?api=1&query=Crystal+Palace+by+Bajwa+Odenwaldstrasse+9+64521+Gross+Gerau+Germany" 
+           target="_blank" 
+           class="map-link">
+          View Location on Google Maps
+        </a>
+      </div>
+      
+      <p class="dua">
+        Please keep us in your du'as 🤍
+      </p>
+    </div>
   </div>
 </body>
 </html>
