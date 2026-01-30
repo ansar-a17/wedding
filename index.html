@@ -106,48 +106,15 @@
     
     .date-section {
       margin: 0;
-    }
-    
-    .month {
-      font-size: 0.85rem;
-      color: #c9b BA1;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 300;
-      margin-bottom: 0.5rem;
-    }
-    
-    .date-container {
-      display: flex;
-      align-items: baseline;
-      justify-content: center;
-      gap: 1rem;
-      margin: 0.5rem 0;
-    }
-    
-    .day-time {
-      font-size: 0.85rem;
-      color: #c9b BA1;
+      font-size: 1.1rem;
+      color: #d4af37;
       letter-spacing: 2px;
-      text-transform: uppercase;
       font-weight: 300;
     }
     
-    .date-number {
-      font-size: 5rem;
-      color: #d4af37;
-      font-weight: 300;
-      line-height: 1;
-      font-family: 'Cinzel', serif;
-      margin: 0 0.5rem;
-    }
-    
-    .year {
-      font-size: 1.2rem;
-      color: #d4af37;
-      letter-spacing: 4px;
-      font-weight: 300;
-      margin-top: 0.5rem;
+    .date-section .separator {
+      margin: 0 0.8rem;
+      opacity: 0.5;
     }
     
     .venue-section {
@@ -233,15 +200,9 @@
       
       <div class="divider"></div>
       
-      <div class="date-section">
-        <p class="month">JULY</p>
-        <div class="date-container">
-          <div class="day-time">MONDAY</div>
-          <div class="date-number">21</div>
-          <div class="day-time">AT 3PM</div>
-        </div>
-        <p class="year">2026</p>
-      </div>
+      <p class="date-section">
+        Monday, 21 July 2026<span class="separator">•</span>3PM
+      </p>
       
       <div class="venue-section">
         <p class="venue-at">at</p>
