@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wedding Invitation - Ansar & Manam</title>
+  <title>Wedding Invitation - Manam & Ansar</title>
   <style>
     * {
       margin: 0;
@@ -12,12 +12,12 @@
     }
     
     body {
-      font-family: 'Cormorant Garamond', 'Georgia', serif;
-      background: linear-gradient(135deg, #6b0f1a 0%, #8B1538 50%, #6b0f1a 100%);
-      color: #f5deb3;
+      font-family: 'Playfair Display', 'Georgia', serif;
+      background: linear-gradient(to bottom, #8B1538, #6b0f1a);
+      color: #e8d5c4;
       text-align: center;
-      padding: 2rem;
-      line-height: 1.8;
+      padding: 3rem 1.5rem;
+      line-height: 1.7;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -25,35 +25,16 @@
     }
     
     .card {
-      max-width: 700px;
+      max-width: 900px;
       margin: auto;
-      background: linear-gradient(to bottom, #7a0e20, #8B1538, #7a0e20);
-      padding: 3rem 2rem;
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-      border: 3px solid #d4af37;
+      background: rgba(122, 14, 32, 0.4);
+      backdrop-filter: blur(10px);
+      padding: 4rem 3rem;
+      border-radius: 2px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+      border: 1px solid rgba(212,175,55,0.3);
+      border-top: 1px solid rgba(212,175,55,0.5);
       position: relative;
-      overflow: hidden;
-    }
-    
-    .card::before,
-    .card::after {
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-    
-    .card::before {
-      top: -100px;
-      left: -100px;
-    }
-    
-    .card::after {
-      bottom: -100px;
-      right: -100px;
     }
     
     .content {
@@ -62,172 +43,172 @@
     }
     
     .bismillah {
-      font-size: 1.5rem;
-      color: #ffd700;
-      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: #d4af37;
+      margin-bottom: 2rem;
       font-family: 'Traditional Arabic', serif;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      font-weight: 300;
     }
     
     .urdu-text {
-      font-size: 0.95rem;
-      color: #f5deb3;
-      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: #c9b BA1;
+      margin-bottom: 3rem;
       font-style: italic;
-      line-height: 1.8;
+      line-height: 2;
+      font-weight: 300;
+      opacity: 0.9;
     }
     
     .parents {
-      font-size: 1rem;
-      color: #f5deb3;
-      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: #c9b BA1;
+      margin-bottom: 0.4rem;
       font-style: italic;
+      font-weight: 300;
+      letter-spacing: 0.5px;
     }
     
     .wedding-title {
-      font-size: 3.5rem;
-      color: #ffd700;
-      margin: 1.5rem 0;
-      font-family: 'Great Vibes', 'Brush Script MT', cursive;
+      font-size: 2.8rem;
+      color: #d4af37;
+      margin: 2rem 0 1.5rem;
+      font-family: 'Playfair Display', serif;
       font-weight: 400;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      font-style: italic;
+      letter-spacing: 2px;
     }
     
     .honouring {
-      font-size: 1.2rem;
-      color: #f5deb3;
-      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #c9b BA1;
+      margin-bottom: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 1px;
     }
     
     .names {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #ffffff;
-      font-weight: 600;
-      letter-spacing: 8px;
-      margin: 1.5rem 0;
+      font-weight: 300;
+      letter-spacing: 12px;
+      margin: 2rem 0;
       text-transform: uppercase;
+      font-family: 'Cinzel', serif;
     }
     
     .divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 2rem 0;
-      gap: 1rem;
-    }
-    
-    .divider::before,
-    .divider::after {
-      content: '';
-      width: 120px;
+      margin: 3rem 0;
       height: 1px;
-      background: linear-gradient(to right, transparent, #d4af37, transparent);
-    }
-    
-    .divider span {
-      color: #ffd700;
-      font-size: 1.5rem;
+      background: linear-gradient(to right, transparent, rgba(212,175,55,0.4), transparent);
     }
     
     .date-section {
-      margin: 2rem 0;
+      margin: 3rem 0;
     }
     
     .month {
-      font-size: 1.3rem;
-      color: #ffd700;
-      letter-spacing: 6px;
+      font-size: 0.95rem;
+      color: #d4af37;
+      letter-spacing: 4px;
       text-transform: uppercase;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
     }
     
     .date-container {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 2rem;
-      margin: 1rem 0;
+      gap: 3rem;
+      margin: 2rem 0;
     }
     
     .day-time {
-      font-size: 1rem;
-      color: #f5deb3;
-      letter-spacing: 3px;
+      font-size: 0.85rem;
+      color: #c9b BA1;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      padding: 0.5rem 1rem;
-      border-top: 1px solid #d4af37;
-      border-bottom: 1px solid #d4af37;
+      font-weight: 300;
     }
     
     .date-number {
-      font-size: 5rem;
-      color: #ffd700;
-      font-weight: 600;
+      font-size: 6rem;
+      color: #d4af37;
+      font-weight: 300;
       line-height: 1;
+      font-family: 'Cinzel', serif;
     }
     
     .year {
-      font-size: 2rem;
-      color: #ffd700;
-      letter-spacing: 8px;
+      font-size: 1.5rem;
+      color: #d4af37;
+      letter-spacing: 6px;
+      font-weight: 300;
+      margin-top: 1rem;
     }
     
     .venue-section {
-      margin-top: 3rem;
-      padding-top: 2rem;
+      margin-top: 4rem;
+      padding-top: 3rem;
       border-top: 1px solid rgba(212,175,55,0.3);
     }
     
     .venue-at {
-      font-size: 1.2rem;
-      color: #f5deb3;
+      font-size: 0.9rem;
+      color: #c9b BA1;
       font-style: italic;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-weight: 300;
     }
     
     .venue-name {
-      font-size: 1.5rem;
-      color: #ffd700;
-      font-weight: 600;
-      letter-spacing: 2px;
+      font-size: 1.4rem;
+      color: #d4af37;
+      font-weight: 400;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     
     .venue-address {
-      font-size: 1rem;
-      color: #f5deb3;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      color: #c9b BA1;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-weight: 300;
     }
     
     .map-link {
       display: inline-block;
-      color: #ffd700;
+      color: #d4af37;
       text-decoration: none;
-      padding: 0.8rem 2rem;
-      border: 2px solid #d4af37;
-      border-radius: 30px;
+      padding: 0.75rem 2.5rem;
+      border: 1px solid rgba(212,175,55,0.5);
+      border-radius: 0;
       transition: all 0.3s ease;
-      font-size: 0.95rem;
-      letter-spacing: 1px;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
       margin-top: 1rem;
+      text-transform: uppercase;
+      font-weight: 300;
     }
     
     .map-link:hover {
-      background: #d4af37;
-      color: #7a0e20;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(212,175,55,0.4);
+      border-color: #d4af37;
+      background: rgba(212,175,55,0.1);
     }
     
     .dua {
-      margin-top: 2.5rem;
-      font-size: 1.1rem;
-      color: #f5deb3;
+      margin-top: 3rem;
+      font-size: 1rem;
+      color: #c9b BA1;
       font-style: italic;
+      font-weight: 300;
     }
     
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,600;1,400&family=Cinzel:wght@300;400;600&display=swap');
   </style>
 </head>
 <body>
@@ -247,11 +228,9 @@
       
       <p class="honouring">Honouring our Bride & Groom</p>
       
-      <h2 class="names">ANSAR & MANAM</h2>
+      <h2 class="names">MANAM & ANSAR</h2>
       
-      <div class="divider">
-        <span>✦</span>
-      </div>
+      <div class="divider"></div>
       
       <div class="date-section">
         <p class="month">JULY</p>
